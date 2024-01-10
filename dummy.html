@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,23 @@
     <link href="dummy.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @media screen and (max-width: 767px) {
+            .navbar-dropdown {
+                display: none;
+            }
+
+            .nav-links.top-[9%] {
+                top: 0 !important;
+            }
+
+            /* Hide the dropdown in mobile view */
+            .nav-links .group:hover .navbar-dropdown {
+                display: none;
+            }
+        }
+    </style>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
@@ -19,43 +34,42 @@
             <div>
                 <img class="w-40 cursor-pointer" src="logo.png" alt="...">
             </div>
-            <div
-                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[35vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+            <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[35vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-                    <li>
-                        <a class="hover:text-gray-500" href="#">Home</a>
-                    </li>
+                    <!-- Your navigation items go here -->
 
-                    <li>
-                        <a class="hover:text-gray-500" href="#">About Us</a>
-                    </li>
-
-                    <li>
-                        <a class="hover:text-gray-500" href="#">Seba</a>
-                    </li>
-
+                    <!-- Example dropdown item -->
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 hover:text-gray-500" href="#">BK Tech</a>
-                            <ul 
-                            class="absolute hidden group-hover:block bg-white">
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="#">Home</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group relative">
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="#">About Us</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group relative">
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="#">BKTech</a>
+                            <ul class="navbar-dropdown absolute hidden group-hover:block bg-white">
+                                <!-- Dropdown content goes here -->
                                 <li>
                                     <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Stainless Steel Tube</a>
                                 </li>
                                 <li>
-                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Pipestainless Steel Fitting</a>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Pipe Stainless Steel Fitting</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
-
                     <li>
                         <div class="group relative">
                             <a id="navbar-dropdown" class="hover:text-gray-500" href="#">Wise Control</a>
-                            <ul 
-                            class="absolute hidden group-hover:block bg-white">
+                            <ul class="navbar-dropdown absolute hidden group-hover:block bg-white">
+                                <!-- Dropdown content goes here -->
                                 <li>
-                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">General Pressure Gauge, Switch, Recorder</a>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">General Pressure Gauge, Switch , Recorder</a>
                                 </li>
                                 <li>
                                     <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Differential Pressure Gauge/Switch</a>
@@ -64,10 +78,10 @@
                                     <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Pressure Transmitter</a>
                                 </li>
                                 <li>
-                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Thermometer, Switch, Recorder</a>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Thermometer, Switch ,Recorder</a>
                                 </li>
                                 <li>
-                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Protective Tube</a>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Protecttive Tube</a>
                                 </li>
                                 <li>
                                     <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Level Gauge/Switch</a>
@@ -84,26 +98,26 @@
                                 <li>
                                     <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Accessories</a>
                                 </li>
+
                             </ul>
                         </div>
                     </li>
-
                     <li>
                         <div class="group relative">
                             <a id="navbar-dropdown" class="hover:text-gray-500" href="#">Genstartech</a>
-                            <ul 
-                                class="absolute hidden group-hover:block bg-white">
+                            <ul class="navbar-dropdown absolute hidden group-hover:block bg-white">
+                                <!-- Dropdown content goes here -->
                                 <li>
-                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200 " href="#">Gas Pressure & Liquid Cylinder Regulators</a>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Gas Pressure & Liquid Cylinder Regulators</a>
                                 </li>
                                 <li>
-                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Gas Manifolds and Gas Panels</a>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Gas Manifold and Gas Panels</a>
                                 </li>
                                 <li>
                                     <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Gas Management Accessories</a>
                                 </li>
                                 <li>
-                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Gas Instrument Valves</a>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Gas Insturment Valves</a>
                                 </li>
                                 <li>
                                     <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Cryogenic Gas Equipment</a>
@@ -118,15 +132,32 @@
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
             </div>
         </nav>
-        <footer class="bg-gray-800 text-white p-4 text-center">
-            <!-- Footer content goes here -->
-            &copy; 2024 Your Website. All rights reserved.
-        </footer>
     </header>
-
+    <!-- Your content goes here -->
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <!-- Footer content goes here -->
+        <h1>The footer content will go here </h1>
+        &copy; 2024 Your Website. All rights reserved.
+    </footer>
     <script>
+        const navDropdown = document.querySelector('.navbar-dropdown');
+
+        function onToggleMenu(e) {
+            if (window.innerWidth > 767) {
+                e.name = e.name === 'menu' ? 'close' : 'menu';
+                navLinks.classList.toggle('top-[9%]');
+            }
+        }
+
+        // Close the dropdown on window resize for smaller screens
+        window.addEventListener('resize', function () {
+            if (window.innerWidth <= 767) {
+                navLinks.classList.remove('top-[9%]');
+            }
+        });
         const navLinks = document.querySelector('.nav-links')
-        function onToggleMenu(e){
+
+        function onToggleMenu(e) {
             e.name = e.name === 'menu' ? 'close' : 'menu'
             navLinks.classList.toggle('top-[9%]')
         }
