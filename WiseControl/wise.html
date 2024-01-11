@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="dummy.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="/sctspl/website.png" type="image/x-icon">
+    <title>SCT Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @media screen and (max-width: 960px) {
+            .navbar-dropdown {
+                display: none;
+            }
+
+            .nav-links.top-[9%] {
+                top: 0 !important;
+            }
+
+            /* Hide the dropdown in mobile view */
+            .nav-links .group:hover .navbar-dropdown {
+                display: none;
+            }
+        }
+    </style>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+
+<body class="font-[Poppins] bg-gradient-to-t from-[#b6f492] to-[#ffffff] h-screen">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%] mx-auto z-10">
+            <div>
+                <img class="w-40 cursor-pointer" src="/sctspl/logo.png" alt="...">
+            </div>
+            <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[35vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <!-- Your navigation items go here -->
+
+                    <!-- Example dropdown item -->
+                    <li>
+                        <div class="group relative">
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/index.html">Home</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group relative">
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/AboutUs/about.html">About Us</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group relative">
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/BKTech/bk.html">BKTech</a>
+                            <ul class="navbar-dropdown absolute hidden group-hover:block bg-white">
+                                <!-- Dropdown content goes here -->
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Stainless Steel Tube</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Pipe Stainless Steel Fitting</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group relative">
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/Seba/seba.html">Seba</a>
+                            <ul class="navbar-dropdown absolute hidden group-hover:block bg-white">
+                                <!-- Dropdown content goes here -->
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Category-1</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Category-2</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Category-3</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Category-4</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group relative">
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/WiseControl/wise.html">Wise Control</a>
+                            <ul class="navbar-dropdown absolute hidden group-hover:block bg-white">
+                                <!-- Dropdown content goes here -->
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">General Pressure Gauge, Switch , Recorder</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Differential Pressure Gauge/Switch</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Pressure Transmitter</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Thermometer, Switch ,Recorder</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Protecttive Tube</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Level Gauge/Switch</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Differential Pressure/Reduced Pressure Flow Meter</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Flow Transmission/Monitoring/Indicator</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Level Transmitter</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Accessories</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group relative">
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/GenStarTech/genstartech.html">Genstartech</a>
+                            <ul class="navbar-dropdown absolute hidden group-hover:block bg-white">
+                                <!-- Dropdown content goes here -->
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Gas Pressure & Liquid Cylinder Regulators</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Gas Manifold and Gas Panels</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Gas Management Accessories</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Gas Insturment Valves</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Cryogenic Gas Equipment</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <button onclick="redirectToContact()" class="bg-gradient-to-t from-[#b6f492] to-[#338b93] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Contact Us</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer lg:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>  
+    
+    <div class="grid place-items-center">
+        <h1 class="text-3xl">Wise Control</h1>
+    </div>
+    
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <!-- Footer content goes here -->
+        <h1>The footer content will go here </h1>
+        &copy; 2024 SCTSPL. All rights reserved.
+    </footer>
+    <script>
+        const navDropdown = document.querySelector('.navbar-dropdown');
+
+        function onToggleMenu(e) {
+            if (window.innerWidth > 767) {
+                e.name = e.name === 'menu' ? 'close' : 'menu';
+                navLinks.classList.toggle('top-[9%]');
+            }
+        }
+
+        // Close the dropdown on window resize for smaller screens
+        window.addEventListener('resize', function () {
+            if (window.innerWidth <= 767) {
+                navLinks.classList.remove('top-[9%]');
+            }
+        });
+        const navLinks = document.querySelector('.nav-links')
+
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+        function redirectToContact() {
+            // Redirect to contact.html
+            window.location.href = "/sctspl/ContactUs/contact.html";
+        }
+    </script>
+</body>
+
+</html>
