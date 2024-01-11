@@ -8,9 +8,10 @@
     <link href="dummy.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="/website.png" type="image/x-icon">
+    <link rel="icon" href="/sctspl/website.png" type="image/x-icon">
     <title>SCT Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         @media screen and (max-width: 960px) {
             .navbar-dropdown {
@@ -94,13 +95,8 @@
             width: 350px; 
             height:250px;
         }
-        .manan{
-            display:grid;
-            place-items:center;
-        }
-    
-
     </style>
+
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
@@ -108,7 +104,7 @@
     <header class="bg-white">
         <nav class="flex justify-between items-center w-[92%] mx-auto z-10">
             <div>
-                <img class="w-40 cursor-pointer" src="/logo.png" alt="...">
+                <img class="w-40 cursor-pointer" src="/sctspl/logo.png" alt="...">
             </div>
             <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[35vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
@@ -117,17 +113,17 @@
                     <!-- Example dropdown item -->
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="#">Home</a>
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/index.html">Home</a>
                         </div>
                     </li>
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="#">About Us</a>
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/AboutUs/about.html">About Us</a>
                         </div>
                     </li>
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="#">BKTech</a>
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/BKTech/bk.html">BKTech</a>
                             <ul class="navbar-dropdown absolute hidden group-hover:block bg-white">
                                 <!-- Dropdown content goes here -->
                                 <li>
@@ -141,7 +137,7 @@
                     </li>
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="#">Seba</a>
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/Seba/seba.html">Seba</a>
                             <ul class="navbar-dropdown absolute hidden group-hover:block bg-white">
                                 <!-- Dropdown content goes here -->
                                 <li>
@@ -161,7 +157,7 @@
                     </li>
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="#">Wise Control</a>
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/WiseControl/wise.html">Wise Control</a>
                             <ul class="navbar-dropdown absolute hidden group-hover:block bg-white">
                                 <!-- Dropdown content goes here -->
                                 <li>
@@ -200,7 +196,7 @@
                     </li>
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="#">Genstartech</a>
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/GenStarTech/genstartech.html">Genstartech</a>
                             <ul class="navbar-dropdown absolute hidden group-hover:block bg-white">
                                 <!-- Dropdown content goes here -->
                                 <li>
@@ -230,9 +226,11 @@
             
         </nav>
     </header>
-    <div class="manan">
-        <h1>Lorem ipsum amkdjji manas masaskad mamska s</h1>
+    
+    <div class="grid place-items-center">
+        <h1 class="text-3xl">Home</h1>
     </div>
+
     <div class="p-9 z-1">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <!-- First Image -->
@@ -277,11 +275,13 @@
             </a>
         </div>
     </div>   
+    
     <footer class="bg-gray-800 text-white p-4 text-center">
         <!-- Footer content goes here -->
         <h1>The footer content will go here </h1>
         &copy; 2024 SCTSPL. All rights reserved.
     </footer>
+    
     <script>
         const navDropdown = document.querySelector('.navbar-dropdown');
 
@@ -306,7 +306,7 @@
         }
         function redirectToContact() {
             // Redirect to contact.html
-            window.location.href = "contact.html";
+            window.location.href = "/sctspl/ContactUs/contact.html";
         }
     </script>
 </body>
