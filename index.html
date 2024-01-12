@@ -27,6 +27,9 @@
                 display: none;
             }
         }
+        .navbar-dropdown:hover .navbar-dropdown {
+            display: grid !important;
+        }
         .card {
             position: relative;
             width: 350px;
@@ -160,7 +163,7 @@
                     <li>
                         <div class="group relative">
                             <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/WiseControl/wise.html">Wise Control</a>
-                            <ul class="navbar-dropdown absolute hidden group-hover:block bg-white">
+                            <ul class="navbar-dropdown absolute hidden group-hover:block bg-white grid grid-cols-2 gap-4">
                                 <!-- Dropdown content goes here -->
                                 <li>
                                     <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">General Pressure Gauge, Switch , Recorder</a>
@@ -192,10 +195,11 @@
                                 <li>
                                     <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Accessories</a>
                                 </li>
-
+                                <!-- Add more items as needed -->
                             </ul>
                         </div>
                     </li>
+
                     <li>
                         <div class="group relative">
                             <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/GenStarTech/genstartech.html">Genstartech</a>
