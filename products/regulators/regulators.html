@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="dummy.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="/sctspl/website.png" type="image/x-icon">
+    <title>SCT Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @media screen and (max-width: 960px) {
+            .navbar-dropdown {
+                display: none;
+            }
+
+            .nav-links.top-[9%] {
+                top: 0 !important;
+            }
+
+            /* Hide the dropdown in mobile view */
+            .nav-links .group:hover .navbar-dropdown {
+                display: none;
+            }
+        }
+        .card {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            perspective: 1000px;
+            box-shadow: 0 0 0 5px #ffffff80;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card svg {
+            width: 48px;
+            fill: #333;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 0;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+        }
+
+        .card:hover .card__content {
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
+
+        .card__title {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .card__description {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+        }
+
+    </style>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+
+<body class="font-[Poppins] bg-gradient-to-t from-[#b6f492] to-[#ffffff] no-repeat">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%] mx-auto z-10">
+            <a href="/sctspl/index.html">
+                <img class="w-40 cursor-pointer" src="/sctspl/logo.png" alt="...">
+            </a>
+            <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[35vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    
+                    <li>
+                        <div class="group relative">
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/index.html">Home</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="group relative">
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/AboutUs/about.html">About Us</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="group relative">
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/products/products-categories.html">Products</a>
+                            <ul class="navbar-dropdown absolute hidden group-hover:block bg-white grid grid-cols-2 gap-4">
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="/sctspl/products/tubes/tubes.html">Tubes</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="/sctspl/products/valves/valves.html">Valves</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="/sctspl/products/fittings/fittings.html">Fittings</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="/sctspl/products/regulators/regulators.html">Regulators</a>
+                                </li>
+                                <li>
+                                    <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="/sctspl/products/accessories/accessories.html">Accessories</a>
+                                </li>
+                                <!-- Add more items as needed -->
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="group relative">
+                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/Customers/customers.html">Customers</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <button onclick="redirectToContact()" class="bg-gradient-to-t from-[#b6f492] to-[#338b93] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Contact Us</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer lg:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>   
+
+    <br><br>
+    
+    <!-- After the main navbar -->
+<nav class="">
+    <div class="container mx-auto flex items-center justify-evenly ">
+        <span class="text-lg font-semibold">Regulators</span>
+        <div class="flex items-center space-x-8">
+            <!-- Category links -->
+            <a href="#" class="text-gray-600 hover:text-blue-600">All</a>
+            <a href="#" class="text-gray-600 hover:text-blue-600">C1</a>
+            <a href="#" class="text-gray-600 hover:text-blue-600">C2</a>
+            <a href="#" class="text-gray-600 hover:text-blue-600">C3</a>
+            <a href="#" class="text-gray-600 hover:text-blue-600">C4</a>
+            <a href="#" class="text-gray-600 hover:text-blue-600">C5</a>
+            <!-- Search bar -->
+            <div class="relative">
+                <input type="text" class="border border-gray-300 bg-white h-10 px-4 pr-10 rounded-lg focus:outline-none" placeholder="Search...">
+                <button class="absolute right-0 top-0 mt-3 mr-4">
+                    <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M10 0C4.486 0 0 4.486 0 10c0 2.482.896 4.77 2.38 6.566l-4.61 6.16 1.952 1.464 4.56-6.086A9.936 9.936 0 0010 20c5.514 0 10-4.486 10-10S15.514 0 10 0zm0 18a8 8 0 110-16 8 8 0 010 16z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<br><br>
+<!--<section class="max-w-4xl mx-auto p-4 justify-evenly">
+    <div class="flex flex-col gap-4">
+        <div class="border p-4 rounded-md">
+            Category 1
+        </div>
+        <div class="border p-4 rounded-md">
+            Category 2
+        </div>
+        <div class="border p-4 rounded-md">
+            Category 3
+        </div>
+        <div class="border p-4 rounded-md">
+            Category 4
+        </div>
+        <div class="border p-4 rounded-md">
+            Category 5
+        </div>
+    </div>
+</section>-->
+<section class="max-w-4l mx-auto p-4 justify-evenly">
+    <div class="flex flex-col gap-4">
+        <div class="border p-4 rounded-md">
+            <h2 class="text-lg font-semibold mb-4">Category 1</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                <!-- Product card for Category 1 -->
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product1-image.jpg" alt="Product 1">
+                    <div class="card__content">
+                        <p class="card__title">Product 1</p>
+                        <p class="card__description">Description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+        
+                <!-- Add more product cards for Category 1 as needed -->
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product2-image.jpg" alt="Product 2">
+                    <div class="card__content">
+                        <p class="card__title">Product 2</p>
+                        <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <!-- Add more product cards for Category 1 as needed -->
+            </div>
+        </div>
+
+        
+        <div class="border p-4 rounded-md">
+            <h2 class="text-lg font-semibold mb-4">Category 2</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                <!-- Product card for Category 2 -->
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product3-image.jpg" alt="Product 3">
+                    <div class="card__content">
+                        <p class="card__title">Product 3</p>
+                        <p class="card__description">Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+        
+                <!-- Add more product cards for Category 2 as needed -->
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
+                    <div class="card__content">
+                        <p class="card__title">Product 4</p>
+                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <!-- Add more product cards for Category 2 as needed -->
+            </div>
+        </div>
+
+        <div class="border p-4 rounded-md">
+            <h2 class="text-lg font-semibold mb-4">Category 3</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                <!-- Product card for Category 2 -->
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product3-image.jpg" alt="Product 3">
+                    <div class="card__content">
+                        <p class="card__title">Product 3</p>
+                        <p class="card__description">Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+        
+                <!-- Add more product cards for Category 2 as needed -->
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
+                    <div class="card__content">
+                        <p class="card__title">Product 4</p>
+                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <!-- Add more product cards for Category 2 as needed -->
+            </div>
+        </div>
+        <div class="border p-4 rounded-md">
+            <h2 class="text-lg font-semibold mb-4">Category 4</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                <!-- Product card for Category 2 -->
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product3-image.jpg" alt="Product 3">
+                    <div class="card__content">
+                        <p class="card__title">Product 3</p>
+                        <p class="card__description">Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+        
+                <!-- Add more product cards for Category 2 as needed -->
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
+                    <div class="card__content">
+                        <p class="card__title">Product 4</p>
+                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <!-- Add more product cards for Category 2 as needed -->
+            </div>
+        </div>
+        <div class="border p-4 rounded-md">
+            <h2 class="text-lg font-semibold mb-4">Category 5</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                <!-- Product card for Category 2 -->
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product3-image.jpg" alt="Product 3">
+                    <div class="card__content">
+                        <p class="card__title">Product 3</p>
+                        <p class="card__description">Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+        
+                <!-- Add more product cards for Category 2 as needed -->
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
+                    <div class="card__content">
+                        <p class="card__title">Product 4</p>
+                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <!-- Add more product cards for Category 2 as needed -->
+            </div>
+        </div>
+
+        
+        
+
+    </div>
+</section>
+
+
+<!-- ... Remaining script and closing tags ... -->
+
+    
+    <br><br>
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <!-- Footer content goes here -->
+        <h1>The footer content will go here </h1>
+        &copy; 2024 SCTSPL. All rights reserved.
+    </footer>
+    <script>
+        const navDropdown = document.querySelector('.navbar-dropdown');
+
+        function onToggleMenu(e) {
+            if (window.innerWidth > 767) {
+                e.name = e.name === 'menu' ? 'close' : 'menu';
+                navLinks.classList.toggle('top-[9%]');
+            }
+        }
+
+        // Close the dropdown on window resize for smaller screens
+        window.addEventListener('resize', function () {
+            if (window.innerWidth <= 767) {
+                navLinks.classList.remove('top-[9%]');
+            }
+        });
+        const navLinks = document.querySelector('.nav-links')
+
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+        function redirectToContact() {
+            // Redirect to contact.html
+            window.location.href = "/sctspl/ContactUs/contact.html";
+        }
+        const productCards = document.querySelectorAll('.card');
+
+        productCards.forEach((card) => {
+            const description = card.querySelector('.card__content');
+
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('hover');
+                description.style.transform = 'rotateX(0deg)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('hover');
+                description.style.transform = 'rotateX(-90deg)';
+            });
+        });
+    </script>
+</body>
+
+</html>
