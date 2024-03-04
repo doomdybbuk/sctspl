@@ -26,71 +26,21 @@
                 display: none;
             }
         }
-        .card {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            background-color: #f2f2f2;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
+
+        .logos{
+            display: grid;
             justify-content: center;
-            overflow: hidden;
-            perspective: 1000px;
-            box-shadow: 0 0 0 5px #ffffff80;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            margin: 10px;
+            align-items: center;
+            transition: transform 0.5s ease; 
         }
 
-        .card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .logos img{
+            aspect-ratio: 3/2;
+            object-fit: contain;
         }
 
-        .card svg {
-            width: 48px;
-            fill: #333;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .card__content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #f2f2f2;
-            transform: rotateX(-90deg);
-            transform-origin: bottom;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            opacity: 0;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-        }
-
-        .card:hover .card__content {
-            transform: rotateX(0deg);
-            opacity: 1;
-        }
-
-        .card__title {
-            margin: 0;
-            font-size: 18px;
-            color: #333;
-            font-weight: 700;
-        }
-
-        .card__description {
-            margin: 10px 0 0;
-            font-size: 14px;
-            color: #777;
-            line-height: 1.4;
+        .logos:hover{
+            transform: scale(1.1);
         }
 
     </style>
@@ -156,6 +106,65 @@
         </nav>
     </header>   
 
+    <section class="text-gray-800">
+        <h2 class="text-3xl font-bold mt-4 text-center sm:text-5xl">SCT Solutions</h2>
+        <p class="max-w-3xl mx-auto mt-4 text-2xl font-bold text-center">Our Customers Make Us Great</p>
+        <p class="max-w-3xl mx-auto mt-4 text-xl text-center">"Welcome to SCT Solutions, where we proudly serve as your partner in semiconductor and solar industry solutions"</p>
+    </section>    
+
+    <div class="container mx-auto px-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/adani.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/aes.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/air-liquide.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/bharat-electronics.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/bhel.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/cmi.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/government-of-puducherry.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/iiser.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/iit kanpur.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/indian-oil.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/isro.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/jspl.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/linde.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/reliance-industries-limited.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/tata-power.png" alt="">
+            </div>
+            <div class="logos">
+                <img src="/sctspl/Customers/Images/winbond.png" alt="">
+            </div>
+        </div>
+    </div>
+    
     <footer class="bg-gray-800 text-white p-4 text-center">
         <!-- Footer content goes here -->
         <h1>The footer content will go here </h1>

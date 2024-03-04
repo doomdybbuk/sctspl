@@ -93,7 +93,7 @@
 
             <div class="flex items-center gap-6">
                 <button onclick="redirectToContact()" class="bg-gradient-to-t from-[#b6f492] to-[#338b93] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Contact Us</button>
-                <!-- <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer lg:hidden"></ion-icon> -->
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer lg:hidden"></ion-icon>
             </div>
         </nav>
     </header>   
@@ -165,27 +165,27 @@
     </footer>
     
     <script>
-        // const navDropdown = document.querySelector('.navbar-dropdown');
+        const navDropdown = document.querySelector('.navbar-dropdown');
 
-        // function onToggleMenu(e) {
-        //     if (window.innerWidth > 767) {
-        //         e.name = e.name === 'menu' ? 'close' : 'menu';
-        //         navLinks.classList.toggle('top-[9%]');
-        //     }
-        // }
+        function onToggleMenu(e) {
+            if (window.innerWidth > 767) {
+                e.name = e.name === 'menu' ? 'close' : 'menu';
+                navLinks.classList.toggle('top-[9%]');
+            }
+        }
 
-        // // Close the dropdown on window resize for smaller screens
-        // window.addEventListener('resize', function () {
-        //     if (window.innerWidth <= 767) {
-        //         navLinks.classList.remove('top-[9%]');
-        //     }
-        // });
-        // const navLinks = document.querySelector('.nav-links')
+        // Close the dropdown on window resize for smaller screens
+        window.addEventListener('resize', function () {
+            if (window.innerWidth <= 767) {
+                navLinks.classList.remove('top-[9%]');
+            }
+        });
+        const navLinks = document.querySelector('.nav-links')
 
-        // function onToggleMenu(e) {
-        //     e.name = e.name === 'menu' ? 'close' : 'menu'
-        //     navLinks.classList.toggle('top-[9%]')
-        // }
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
 
         function redirectToContact() {
             // Redirect to contact.html
