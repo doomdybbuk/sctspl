@@ -26,6 +26,42 @@
                 display: none;
             }
         }
+
+        .middle{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+        box-sizing: border-box;
+        width: 230px;
+        height: 260px;
+        background: rgba(217, 217, 217, 0.58);
+        border: 1px solid white;
+        box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+        backdrop-filter: blur(6px);
+        border-radius: 17px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        font-weight: bolder;
+        color: black;
+        }
+
+        .card:hover {
+        border: 1px solid black;
+        transform: scale(1.05);
+        }
+
+        .card:active {
+        transform: scale(0.95) rotateZ(1.7deg);
+        }
+
     </style>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
@@ -97,11 +133,29 @@
         <p class="max-w-3xl mx-auto mt-4 text-xl text-center">"We are a prominent supplier of essential components, specializing in tubes, valves, fittings, and critical consumables pivotal to the core of semiconductor and solar manufacturing"</p>
     </section>
 
-    <div class="container mx-auto px-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            
+    <br>
+
+    <div class="middle mx-auto px-10 text">
+        <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+            <a href="/sctspl/products/tubes/tubes.html" class="card">
+                Tubes
+            </a>
+            <a href="/sctspl/products/valves/valves.html" class="card">
+                Valves
+            </a>
+            <a href="/sctspl/products/fittings/fittings.html" class="card">
+                Fittings
+            </a>
+            <a href="/sctspl/products/regulators/regulators.html" class="card">
+                Regulators
+            </a>
+            <a href="/sctspl/products/accessories/accessories.html" class="card">
+                Accessories
+            </a>
         </div>
     </div>
+
+    <br>
 
     <footer class="bg-gray-800 text-white p-4 text-center">
         <!-- Footer content goes here -->
