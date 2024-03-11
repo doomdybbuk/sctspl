@@ -97,7 +97,7 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
-<body class="font-[Poppins] bg-gradient-to-t from-[#b6f492] to-[#ffffff] no-repeat">
+<body class="font-[Poppins] bg-gradient-to-t from-[#b6f492] to-[#ffffff] no-repeat flex flex-col min-h-screen">
     <header class="bg-white">
         <nav class="flex justify-between items-center w-[92%] mx-auto z-10">
             <a href="/sctspl/index.html">
@@ -178,116 +178,55 @@
 
 
 <br><br>
-<section class="max-w-4l mx-auto p-4 justify-evenly">
+<section class="mx-auto p-1 justify-evenly">
     <div class="flex flex-col gap-4">
         <div class="border p-4 rounded-md product-catogery" id="catogery1">
-            <h2 class="text-lg font-semibold mb-4">Electro Polished Tubes</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            <h2 class="text-lg font-semibold mb-4">Seamless Welded Tubes</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-center gap-10">
                 <!-- Product card for Category 1 -->
-                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-x" onclick="redirectToDescriptionPage()">
                     <img src="https://example.com/product1-image.jpg" alt="">
                     <div class="card__content">
-                        <p class="card__title">tubes1</p>
+                        <p class="card__title">Electro Polished Tubes</p>
                         <p class="card__description">Description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
         
                 <!-- Add more product cards for Category 1 as needed -->
-                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
-                    <img src="https://example.com/product2-image.jpg" alt="">
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl" onclick="redirectToDescriptionPage()">
+                    <img src="https://example.com/product2-image.jpg" alt=" ">
                     <div class="card__content">
-                        <p class="card__title">tubes2</p>
+                        <p class="card__title">Bright Annealing Tubes</p>
+                        <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl" onclick="redirectToDescriptionPage()">
+                    <img src="https://example.com/product2-image.jpg" alt=" ">
+                    <div class="card__content">
+                        <p class="card__title">Mechanical Tubes</p>
+                        <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl" onclick="redirectToDescriptionPage()">
+                    <img src="https://example.com/product2-image.jpg" alt=" ">
+                    <div class="card__content">
+                        <p class="card__title">Annealing Pickling Tubes</p>
                         <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
                 <!-- Add more product cards for Category 1 as needed -->
             </div>
         </div>
-
-        
-        <div class="border p-4 rounded-md">
-            <h2 class="text-lg font-semibold mb-4">Bright Annealing Tubes</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                <!-- Product card for Category 2 -->
-                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
-                    <img src="https://example.com/product3-image.jpg" alt="Product 3">
-                    <div class="card__content">
-                        <p class="card__title">Product 3</p>
-                        <p class="card__description">Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-        
-                <!-- Add more product cards for Category 2 as needed -->
-                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
-                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
-                    <div class="card__content">
-                        <p class="card__title">Product 4</p>
-                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-                <!-- Add more product cards for Category 2 as needed -->
-            </div>
-        </div>
-
-        <div class="border p-4 rounded-md">
-            <h2 class="text-lg font-semibold mb-4">Mechanical Polishing Tubes</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                <!-- Product card for Category 2 -->
-                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
-                    <img src="https://example.com/product3-image.jpg" alt="Product 3">
-                    <div class="card__content">
-                        <p class="card__title">Product 3</p>
-                        <p class="card__description">Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-        
-                <!-- Add more product cards for Category 2 as needed -->
-                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
-                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
-                    <div class="card__content">
-                        <p class="card__title">Product 4</p>
-                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-                <!-- Add more product cards for Category 2 as needed -->
-            </div>
-        </div>
-        <div class="border p-4 rounded-md">
-            <h2 class="text-lg font-semibold mb-4">Annealing Pickling Tubes</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                <!-- Product card for Category 2 -->
-                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
-                    <img src="https://example.com/product3-image.jpg" alt="Product 3">
-                    <div class="card__content">
-                        <p class="card__title">Product 3</p>
-                        <p class="card__description">Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-        
-                <!-- Add more product cards for Category 2 as needed -->
-                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
-                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
-                    <div class="card__content">
-                        <p class="card__title">Product 4</p>
-                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-                <!-- Add more product cards for Category 2 as needed -->
-            </div>
-        </div>
-
-        
-        
-
     </div>
 </section>
+
 
 
 <!-- ... Remaining script and closing tags ... -->
 
     
     <br><br>
-    <footer class="bg-gray-800 text-white p-4 text-center">
+    <footer class="bg-gray-800 text-white p-4 text-center mt-auto">
         <!-- Footer content goes here -->
         <h1>The footer content will go here </h1>
         &copy; 2024 SCTSPL. All rights reserved.
@@ -375,7 +314,9 @@
                 }
             });
         }
-        
+        function redirectToDescriptionPage(){
+            window.location.href = '/sctspl/products/tubes/tubesdescription.html'
+        }
       
     </script>
 </body>

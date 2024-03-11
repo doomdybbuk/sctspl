@@ -163,17 +163,10 @@
     <div class="container mx-auto flex items-center justify-evenly ">
         <span class="text-lg font-semibold">Fittings</span>
         <div class="flex items-center space-x-8">
-            <!-- Category links -->
-            <a href="#" class="text-gray-600 hover:text-blue-600">All</a>
-            <a href="#" class="text-gray-600 hover:text-blue-600">C1</a>
-            <a href="#" class="text-gray-600 hover:text-blue-600">C2</a>
-            <a href="#" class="text-gray-600 hover:text-blue-600">C3</a>
-            <a href="#" class="text-gray-600 hover:text-blue-600">C4</a>
-            <a href="#" class="text-gray-600 hover:text-blue-600">C5</a>
             <!-- Search bar -->
             <div class="relative">
-                <input type="text" class="border border-gray-300 bg-white h-10 px-4 pr-10 rounded-lg focus:outline-none" placeholder="Search...">
-                <button class="absolute right-0 top-0 mt-3 mr-4">
+                <input type="text" id="productSearch" class="border border-gray-300 bg-white h-10 px-4 pr-10 rounded-lg focus:outline-none" placeholder="Search...">
+                <button class="absolute right-0 top-0 mt-3 mr-4" onclick="performSearch()">
                     <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M10 0C4.486 0 0 4.486 0 10c0 2.482.896 4.77 2.38 6.566l-4.61 6.16 1.952 1.464 4.56-6.086A9.936 9.936 0 0010 20c5.514 0 10-4.486 10-10S15.514 0 10 0zm0 18a8 8 0 110-16 8 8 0 010 16z"/>
                     </svg>
@@ -185,44 +178,74 @@
 
 
 <br><br>
-<!--<section class="max-w-4xl mx-auto p-4 justify-evenly">
-    <div class="flex flex-col gap-4">
-        <div class="border p-4 rounded-md">
-            Category 1
-        </div>
-        <div class="border p-4 rounded-md">
-            Category 2
-        </div>
-        <div class="border p-4 rounded-md">
-            Category 3
-        </div>
-        <div class="border p-4 rounded-md">
-            Category 4
-        </div>
-        <div class="border p-4 rounded-md">
-            Category 5
-        </div>
-    </div>
-</section>-->
 <section class="max-w-4l mx-auto p-4 justify-evenly">
     <div class="flex flex-col gap-4">
-        <div class="border p-4 rounded-md">
-            <h2 class="text-lg font-semibold mb-4">Category 1</h2>
+        <div class="border p-4 rounded-md product-catogery" id="catogery1">
+            <h2 class="text-lg font-semibold mb-4">Standard Fittings</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 <!-- Product card for Category 1 -->
                 <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
-                    <img src="https://example.com/product1-image.jpg" alt="Product 1">
+                    <img src="https://example.com/product1-image.jpg" alt="">
                     <div class="card__content">
-                        <p class="card__title">Product 1</p>
+                        <p class="card__title">Elbow</p>
                         <p class="card__description">Description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
         
                 <!-- Add more product cards for Category 1 as needed -->
                 <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
-                    <img src="https://example.com/product2-image.jpg" alt="Product 2">
+                    <img src="https://example.com/product2-image.jpg" alt=" ">
                     <div class="card__content">
-                        <p class="card__title">Product 2</p>
+                        <p class="card__title">Equal Tee</p>
+                        <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product2-image.jpg" alt=" ">
+                    <div class="card__content">
+                        <p class="card__title">Multi-Header Tee</p>
+                        <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product2-image.jpg" alt=" ">
+                    <div class="card__content">
+                        <p class="card__title">Union Cross</p>
+                        <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product2-image.jpg" alt=" ">
+                    <div class="card__content">
+                        <p class="card__title">Reducing Tee</p>
+                        <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product2-image.jpg" alt=" ">
+                    <div class="card__content">
+                        <p class="card__title">Caps</p>
+                        <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product2-image.jpg" alt=" ">
+                    <div class="card__content">
+                        <p class="card__title">Concentric Reducer</p>
+                        <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product2-image.jpg" alt=" ">
+                    <div class="card__content">
+                        <p class="card__title">Eccentric Reducer</p>
+                        <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product2-image.jpg" alt=" ">
+                    <div class="card__content">
+                        <p class="card__title">Cap Reducer</p>
                         <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
@@ -232,13 +255,13 @@
 
         
         <div class="border p-4 rounded-md">
-            <h2 class="text-lg font-semibold mb-4">Category 2</h2>
+            <h2 class="text-lg font-semibold mb-4">Joint Fittings</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 <!-- Product card for Category 2 -->
                 <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
                     <img src="https://example.com/product3-image.jpg" alt="Product 3">
                     <div class="card__content">
-                        <p class="card__title">Product 3</p>
+                        <p class="card__title">Joint Tee</p>
                         <p class="card__description">Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
@@ -247,7 +270,14 @@
                 <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
                     <img src="https://example.com/product4-image.jpg" alt="Product 4">
                     <div class="card__content">
-                        <p class="card__title">Product 4</p>
+                        <p class="card__title">Joint Multi-Header Tee</p>
+                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
+                    <div class="card__content">
+                        <p class="card__title">Joint Reducer</p>
                         <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
@@ -256,13 +286,13 @@
         </div>
 
         <div class="border p-4 rounded-md">
-            <h2 class="text-lg font-semibold mb-4">Category 3</h2>
+            <h2 class="text-lg font-semibold mb-4">Flange Conncetions</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 <!-- Product card for Category 2 -->
                 <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
                     <img src="https://example.com/product3-image.jpg" alt="Product 3">
                     <div class="card__content">
-                        <p class="card__title">Product 3</p>
+                        <p class="card__title">RF blind Flange</p>
                         <p class="card__description">Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
@@ -271,7 +301,21 @@
                 <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
                     <img src="https://example.com/product4-image.jpg" alt="Product 4">
                     <div class="card__content">
-                        <p class="card__title">Product 4</p>
+                        <p class="card__title">Lap Joint</p>
+                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
+                    <div class="card__content">
+                        <p class="card__title">Tefron Gasket</p>
+                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
+                    <div class="card__content">
+                        <p class="card__title">Pipe Flange</p>
                         <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
@@ -279,13 +323,13 @@
             </div>
         </div>
         <div class="border p-4 rounded-md">
-            <h2 class="text-lg font-semibold mb-4">Category 4</h2>
+            <h2 class="text-lg font-semibold mb-4">Coaxial Fittings</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 <!-- Product card for Category 2 -->
                 <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
                     <img src="https://example.com/product3-image.jpg" alt="Product 3">
                     <div class="card__content">
-                        <p class="card__title">Product 3</p>
+                        <p class="card__title">Coaxial Elbow</p>
                         <p class="card__description">Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
@@ -294,30 +338,42 @@
                 <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
                     <img src="https://example.com/product4-image.jpg" alt="Product 4">
                     <div class="card__content">
-                        <p class="card__title">Product 4</p>
+                        <p class="card__title">Coaxial Equal Tee</p>
                         <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
-                <!-- Add more product cards for Category 2 as needed -->
-            </div>
-        </div>
-        <div class="border p-4 rounded-md">
-            <h2 class="text-lg font-semibold mb-4">Category 5</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                <!-- Product card for Category 2 -->
-                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
-                    <img src="https://example.com/product3-image.jpg" alt="Product 3">
-                    <div class="card__content">
-                        <p class="card__title">Product 3</p>
-                        <p class="card__description">Description of Product 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-        
-                <!-- Add more product cards for Category 2 as needed -->
                 <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
                     <img src="https://example.com/product4-image.jpg" alt="Product 4">
                     <div class="card__content">
-                        <p class="card__title">Product 4</p>
+                        <p class="card__title">Coaxial Reducing Tee</p>
+                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
+                    <div class="card__content">
+                        <p class="card__title">Stop Spacer</p>
+                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
+                    <div class="card__content">
+                        <p class="card__title">Coaxial Half Tube</p>
+                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
+                    <div class="card__content">
+                        <p class="card__title">Coaxial Over Tube</p>
+                        <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl">
+                    <img src="https://example.com/product4-image.jpg" alt="Product 4">
+                    <div class="card__content">
+                        <p class="card__title">Coaxial Reducer</p>
                         <p class="card__description">Description of Product 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
@@ -382,6 +438,50 @@
                 description.style.transform = 'rotateX(-90deg)';
             });
         });
+        function showCategory(category) {
+            // Hide all category boxes
+            var allCategories = document.querySelectorAll('.category-box');
+            allCategories.forEach(function (cat) {
+              cat.style.display = 'none';
+            });
+      
+            // Show the selected category box
+            var selectedCategory = document.getElementById('category' + category);
+            if (selectedCategory) {
+              selectedCategory.style.display = 'block';
+            }
+          }
+          function performSearch() {
+            var searchTerm = document.getElementById('productSearch').value.toLowerCase();
+            var productCategories = document.querySelectorAll('.product-catogery');
+        
+            productCategories.forEach(function (category) {
+                var categoryTitle = category.querySelector('h2').innerText.toLowerCase();
+                var productCards = category.querySelectorAll('.card');
+        
+                productCards.forEach(function (card) {
+                    var cardTitle = card.querySelector('.card__title').innerText.toLowerCase();
+                    var cardDescription = card.querySelector('.card__description').innerText.toLowerCase();
+        
+                    // Check if the search term is present in the category title, card title, or card description
+                    if (categoryTitle.includes(searchTerm) || cardTitle.includes(searchTerm) || cardDescription.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+        
+                // Check if any card within the category is visible, and show/hide the category accordingly
+                var visibleCards = category.querySelectorAll('.card:not([style*="display: none"])');
+                if (visibleCards.length > 0) {
+                    category.style.display = 'block';
+                } else {
+                    category.style.display = 'none';
+                }
+            });
+        }
+        
+      
     </script>
 </body>
 

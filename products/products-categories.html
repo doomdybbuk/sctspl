@@ -65,12 +65,14 @@
         .card:active {
         transform: scale(0.95) rotateZ(1.7deg);
         }
-
+        .nav-links a.active {
+            border-bottom: 2px solid #338b93; /* Set the underline color */
+        }
     </style>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
-<body class="font-[Poppins] bg-gradient-to-t from-[#b6f492] to-[#ffffff] no-repeat">
+<body class="font-[Poppins] bg-gradient-to-t from-[#b6f492] to-[#ffffff] no-repeat flex flex-col min-h-screen">
     <header class="bg-white">
         <nav class="flex justify-between items-center w-[92%] mx-auto z-10">
             <a href="/sctspl/index.html">
@@ -140,7 +142,7 @@
     <br>
 
     <div class="middle mx-auto px-10 text">
-        <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-20">
             <a href="/sctspl/products/tubes/tubes.html" class="card">
                 Tubes
             </a>
@@ -161,7 +163,7 @@
 
     <br>
 
-    <footer class="bg-gray-800 text-white p-4 text-center">
+    <footer class="bg-gray-800 text-white p-4 text-center mt-auto">
         <!-- Footer content goes here -->
         <h1>The footer content will go here </h1>
         &copy; 2024 SCTSPL. All rights reserved.
@@ -192,6 +194,35 @@
             // Redirect to contact.html
             window.location.href = "/sctspl/ContactUs/contact.html";
         }
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+            // Function to set the active link and store it in local storage
+            function setActiveLink() {
+                const activeLink = this.getAttribute('href');
+                localStorage.setItem('activeLink', activeLink);
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                this.classList.add('active');
+            }
+
+            // Attach click event to each nav link
+            navLinks.forEach(link => {
+                link.addEventListener('click', setActiveLink);
+            });
+
+            // Check local storage for the active link and set it
+            const storedActiveLink = localStorage.getItem('activeLink');
+            if (storedActiveLink) {
+                const activeLinkElement = document.querySelector(`.nav-links a[href="${storedActiveLink}"]`);
+                if (activeLinkElement) {
+                    activeLinkElement.classList.add('active');
+                }
+            }
+        });
     </script>
 </body>
 

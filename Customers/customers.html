@@ -32,6 +32,8 @@
             justify-content: center;
             align-items: center;
             transition: transform 0.5s ease; 
+            mix-blend-mode: multiply;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .logos img{
@@ -42,12 +44,14 @@
         .logos:hover{
             transform: scale(1.1);
         }
-
+        .nav-links a.active {
+            border-bottom: 2px solid #338b93; /* Set the underline color */
+        }
     </style>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
-<body class="font-[Poppins] bg-gradient-to-t from-[#b6f492] to-[#ffffff] no-repeat">
+<body class="font-[Poppins] bg-gradient-to-t from-[#b6f492] to-[#ffffff] no-repeat flex flex-col min-h-screen">
     <header class="bg-white">
         <nav class="flex justify-between items-center w-[92%] mx-auto z-10">
             <a href="/sctspl/index.html">
@@ -111,9 +115,9 @@
         <p class="max-w-3xl mx-auto mt-4 text-2xl font-bold text-center">Our Customers Make Us Great</p>
         <p class="max-w-3xl mx-auto mt-4 text-xl text-center">"Welcome to SCT Solutions, where we proudly serve as your partner in semiconductor and solar industry solutions"</p>
     </section>    
-
+    <br><br>
     <div class="container mx-auto px-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div class="logos">
                 <img src="/sctspl/Customers/Images/adani.png" alt="">
             </div>
@@ -164,8 +168,8 @@
             </div>
         </div>
     </div>
-    
-    <footer class="bg-gray-800 text-white p-4 text-center">
+    <br><br>
+    <footer class="bg-gray-800 text-white p-4 text-center mt-auto">
         <!-- Footer content goes here -->
         <h1>The footer content will go here </h1>
         &copy; 2024 SCTSPL. All rights reserved.
@@ -210,6 +214,35 @@
                 card.classList.remove('hover');
                 description.style.transform = 'rotateX(-90deg)';
             });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+            // Function to set the active link and store it in local storage
+            function setActiveLink() {
+                const activeLink = this.getAttribute('href');
+                localStorage.setItem('activeLink', activeLink);
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                this.classList.add('active');
+            }
+
+            // Attach click event to each nav link
+            navLinks.forEach(link => {
+                link.addEventListener('click', setActiveLink);
+            });
+
+            // Check local storage for the active link and set it
+            const storedActiveLink = localStorage.getItem('activeLink');
+            if (storedActiveLink) {
+                const activeLinkElement = document.querySelector(`.nav-links a[href="${storedActiveLink}"]`);
+                if (activeLinkElement) {
+                    activeLinkElement.classList.add('active');
+                }
+            }
         });
     </script>
 </body>
