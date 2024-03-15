@@ -254,35 +254,6 @@
                 description.style.transform = 'rotateX(-90deg)';
             });
         });
-        document.addEventListener("DOMContentLoaded", function () {
-            const navLinks = document.querySelectorAll('.nav-links a');
-
-            // Function to set the active link and store it in local storage
-            function setActiveLink() {
-                const activeLink = this.getAttribute('href');
-                localStorage.setItem('activeLink', activeLink);
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                });
-
-                this.classList.add('active');
-            }
-
-            // Attach click event to each nav link
-            navLinks.forEach(link => {
-                link.addEventListener('click', setActiveLink);
-            });
-
-            // Check local storage for the active link and set it
-            const storedActiveLink = localStorage.getItem('activeLink');
-            if (storedActiveLink) {
-                const activeLinkElement = document.querySelector(`.nav-links a[href="${storedActiveLink}"]`);
-                if (activeLinkElement) {
-                    activeLinkElement.classList.add('active');
-                }
-            }
-        });
     </script>
 </body>
 
