@@ -37,61 +37,61 @@
         
         /* Hide the images by default */
         .mySlides {
-        display: none;
+            display: none;
         }
 
         /* Next & previous buttons */
         .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        margin-top: -22px;
-        padding: 16px;
-        color: #ffffff;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
         }
 
         /* Position the "next button" to the right */
         .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
+            right: 0;
+            border-radius: 3px 0 0 3px;
         }
 
         /* On hover, add a black background color with a little bit see-through */
         .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0,0,0,0.8);
         }
 
         /* The dots/bullets/indicators */
         .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
         }
 
         .active, .dot:hover {
-        background-color: #000000;
+            background-color: #000000;
         }
 
         /* Fading animation */
         .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
         }
 
         @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
+            from {opacity: .4}
+            to {opacity: 1}
         }
         .nav-links a.active {
             border-bottom: 2px solid #338b93; /* Set the underline color */
@@ -101,35 +101,6 @@
             display: grid;
             justify-content: center;
             align-items: center;
-        }
-
-        .card {
-            box-sizing: border-box;
-            width: 230px;
-            height: 260px;
-            background: rgba(217, 217, 217, 0.58);
-            border: 1px solid white;
-            box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-            backdrop-filter: blur(6px);
-            border-radius: 17px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.5s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            user-select: none;
-            font-weight: bolder;
-            color: black;
-        }
-
-        .card:hover {
-            border: 1px solid black;
-            transform: scale(1.05);
-        }
-
-        .card:active {
-            transform: scale(0.95) rotateZ(1.7deg);
         }
 
         .hover-underline-animation {
@@ -214,36 +185,38 @@
             </div>
             <div class="flex items-center gap-6">
                 <button onclick="redirectToContact()" class="bg-gradient-to-t from-[#b6f492] to-[#338b93] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Contact Us</button>
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer lg:hidden"></ion-icon>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
             </div>
         </nav>
     </header>
 
     <!-- Slideshow container -->
-    <div class="slideshow w-full">
+    <div class="slideshow w-full ">
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
-        <img src="/sctspl/Images/Home Slideshow/2.png" style="width:100%">
+            <img class="hidden md:block" src="/sctspl/Images/Home Slideshow/2.png" style="width:100%">
+            <img class="block md:hidden" src="/sctspl/Images/Home Slideshow/2-mobile.png" style="width:100%">
         </div>
-
-    </div>   
   
         <div class="mySlides fade">
-        <img src="/sctspl/Images/Home Slideshow/3.png" style="width:100%">
+            <img class="hidden md:block" src="/sctspl/Images/Home Slideshow/3.png" style="width:100%">
+            <img class="block md:hidden" src="/sctspl/Images/Home Slideshow/3-mobile.png" style="width:100%">
         </div>
 
         <div class="mySlides fade">
-            <img src="/sctspl/Images/Home Slideshow/4.png" style="width:100%">
+            <img class="hidden md:block" src="/sctspl/Images/Home Slideshow/4.png" style="width:100%">
+            <img class="block md:hidden" src="/sctspl/Images/Home Slideshow/4-mobile.png" style="width:100%">
         </div>
 
         <div class="mySlides fade">
-            <img src="/sctspl/Images/Home Slideshow/5.png" style="width:100%">
+            <img class="hidden md:block" src="/sctspl/Images/Home Slideshow/5.png" style="width:100%">
+            <img class="block md:hidden" src="/sctspl/Images/Home Slideshow/5-mobile.png" style="width:100%">
         </div>
     
         <!-- Next and previous buttons -->
-        <a class="prev hidden md:inline-block" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next hidden md:inline-block" onclick="plusSlides(1)">&#10095;</a>
+        <a class="prev hidden lg:inline-block" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next hidden lg:inline-block" onclick="plusSlides(1)">&#10095;</a>
 
         <!-- The dots/circles -->
         <div style="text-align:center" class="bottom-0 mt-1">
@@ -255,28 +228,78 @@
     </div>
 
     <section class="text-gray-800">
-        <h2 class="text-3xl font-bold mt-4 text-center sm:text-5xl">SCT Solutions</h2>
+        <h2 class="font-bold mt-4 text-center text-5xl">SCT Solutions</h2>
     </section>
 
     <br>
 
     <div class="middle mx-auto px-10 text">
-        <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-5 gap-20">
-            <a href="/sctspl/products/tubes/tubes.html" class="card">
-                Tubes
-            </a>
-            <a href="/sctspl/products/valves/valves.html" class="card">
-                Valves
-            </a>
-            <a href="/sctspl/products/fittings/fittings.html" class="card">
-                Fittings
-            </a>
-            <a href="/sctspl/products/regulators/regulators.html" class="card">
-                Regulators
-            </a>
-            <a href="/sctspl/products/accessories/accessories.html" class="card">
-                Accessories
-            </a>
+        <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-20">
+            
+            <div class="middle">
+                <div class="max-w-sm border border-gray-200 rounded-lg shadow bg-gray-800">
+                    <a href="/sctspl/products/tubes/tubes.html">
+                        <img class="rounded-t-lg h-60" src="/sctspl/products/Images/tubes/AP Tubes.png" alt="" />
+                    </a>
+                    <div class="middle my-2">
+                        <a href="/sctspl/products/tubes/tubes.html">
+                            <h5 class="mb-2 text-center text-xl tracking-tight text-white">Tubes</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="middle">
+                <div class="max-w-sm border border-gray-200 rounded-lg shadow bg-gray-800">
+                    <a href="/sctspl/products/tubes/tubes.html">
+                        <img class="rounded-t-lg h-60" src="/sctspl/products/Images/valves/EP Tubes.png" alt="" />
+                    </a>
+                    <div class="middle my-2">
+                        <a href="/sctspl/products/tubes/tubes.html">
+                            <h5 class="mb-2 text-center text-xl tracking-tight text-white">Valves</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="middle">
+                <div class="max-w-sm border border-gray-200 rounded-lg shadow bg-gray-800">
+                    <a href="/sctspl/products/tubes/tubes.html">
+                        <img class="rounded-t-lg h-60" src="/sctspl/products/Images/fittings/union-cross.png" alt="" />
+                    </a>
+                    <div class="middle my-2">
+                        <a href="/sctspl/products/tubes/tubes.html">
+                            <h5 class="mb-2 text-center text-xl tracking-tight text-white">Fittings</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="middle">
+                <div class="max-w-sm border border-gray-200 rounded-lg shadow bg-gray-800">
+                    <a href="/sctspl/products/tubes/tubes.html">
+                        <img class="rounded-t-lg h-60" src="/sctspl/products/Images/regulators/high-flow.jpg" alt="" />
+                    </a>
+                    <div class="middle my-2">
+                        <a href="/sctspl/products/tubes/tubes.html">
+                            <h5 class="mb-2 text-center text-xl tracking-tight text-white">Regulators</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="middle">
+                <div class="max-w-sm border border-gray-200 rounded-lg shadow bg-gray-800">
+                    <a href="/sctspl/products/tubes/tubes.html">
+                        <img class="rounded-t-lg h-60" src="/sctspl/products/Images/Accessories/Pressure Gauges.jpeg" alt="" />
+                    </a>
+                    <div class="middle my-2">
+                        <a href="/sctspl/products/tubes/tubes.html">
+                            <h5 class="mb-2 text-center text-xl tracking-tight text-white">Accessories</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
