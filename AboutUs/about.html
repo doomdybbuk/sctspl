@@ -46,6 +46,30 @@
         .nav-links a.active {
             border-bottom: 2px solid #338b93; /* Set the underline color */
         }
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
+
+        .hover-underline-animation:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #5eff00;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
     </style>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
@@ -62,19 +86,19 @@
                     
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/index.html">Home</a>
+                            <a id="navbar-dropdown" class="hover-underline-animation" href="/sctspl/index.html">Home</a>
                         </div>
                     </li>
 
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/AboutUs/about.html">About Us</a>
+                            <a id="navbar-dropdown" class="hover-underline-animation" href="/sctspl/AboutUs/about.html">About Us</a>
                         </div>
                     </li>
 
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/products/products-categories.html">Products</a>
+                            <a id="navbar-dropdown" class="hover-underline-animation" href="/sctspl/products/products-categories.html">Products</a>
                             <ul class="navbar-dropdown absolute hidden group-hover:block bg-white grid grid-cols-2 gap-4">
                                 <li>
                                     <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="/sctspl/products/tubes/tubes.html">Tubes</a>
@@ -98,7 +122,7 @@
 
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/Customers/customers.html">Customers</a>
+                            <a id="navbar-dropdown" class="hover-underline-animation" href="/sctspl/Customers/customers.html">Customers</a>
                         </div>
                     </li>
                 </ul>

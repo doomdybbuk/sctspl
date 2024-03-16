@@ -93,6 +93,29 @@
             line-height: 1.4;
         }
 
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
+
+        .hover-underline-animation:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #5eff00;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
     </style>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
@@ -108,19 +131,19 @@
                     
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/index.html">Home</a>
+                            <a id="navbar-dropdown" class="hover-underline-animation" href="/sctspl/index.html">Home</a>
                         </div>
                     </li>
 
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/AboutUs/about.html">About Us</a>
+                            <a id="navbar-dropdown" class="hover-underline-animation" href="/sctspl/AboutUs/about.html">About Us</a>
                         </div>
                     </li>
 
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/products/products-categories.html">Products</a>
+                            <a id="navbar-dropdown" class="hover-underline-animation" href="/sctspl/products/products-categories.html">Products</a>
                             <ul class="navbar-dropdown absolute hidden group-hover:block bg-white grid grid-cols-2 gap-4">
                                 <li>
                                     <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="/sctspl/products/tubes/tubes.html">Tubes</a>
@@ -144,7 +167,7 @@
 
                     <li>
                         <div class="group relative">
-                            <a id="navbar-dropdown" class="hover:text-gray-500" href="/sctspl/Customers/customers.html">Customers</a>
+                            <a id="navbar-dropdown" class="hover-underline-animation" href="/sctspl/Customers/customers.html">Customers</a>
                         </div>
                     </li>
                 </ul>
@@ -182,13 +205,13 @@
     <div class="flex flex-col gap-4">
         <div class="border p-4 rounded-md product-catogery" id="catogery1">
             <h2 class="text-lg font-semibold mb-4">Seamless Welded Tubes</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-center gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-10">
                 <!-- Product card for Category 1 -->
                 <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-x" onclick="redirectToDescriptionPage()">
                     <img src="/sctspl/products/Images/tubes/Ball Valve.jpeg" alt="">
                     <div class="card__content">
                         <p class="card__title">Electro Polished Tubes</p>
-                        <p class="card__description">Description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="card__description"></p>
                     </div>
                 </div>
         
@@ -197,21 +220,21 @@
                     <img src="/sctspl/products/Images/tubes/BA Tubes.png" alt=" ">
                     <div class="card__content">
                         <p class="card__title">Bright Annealing Tubes</p>
-                        <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="card__description"></p>
                     </div>
                 </div>
                 <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl" onclick="redirectToDescriptionPage()">
                     <img src="/sctspl/products/Images/tubes/MP Tubes.png" alt=" ">
                     <div class="card__content">
                         <p class="card__title">Mechanical Tubes</p>
-                        <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="card__description"></p>
                     </div>
                 </div>
                 <div class="card relative overflow-hidden bg-white p-4 rounded-md shadow-md transition-transform duration-600 transform scale-100 hover:scale-105 hover:shadow-xl" onclick="redirectToDescriptionPage()">
                     <img src="/sctspl/products/Images/tubes/AP Tubes.png" alt=" ">
                     <div class="card__content">
                         <p class="card__title">Annealing Pickling Tubes</p>
-                        <p class="card__description">Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="card__description"></p>
                     </div>
                 </div>
                 <!-- Add more product cards for Category 1 as needed -->
@@ -225,12 +248,52 @@
 <!-- ... Remaining script and closing tags ... -->
 
     
-    <br><br>
-    <footer class="bg-gray-800 text-white p-4 text-center mt-auto">
-        <!-- Footer content goes here -->
-        <h1>The footer content will go here </h1>
-        &copy; 2024 SCTSPL. All rights reserved.
+    <br>
+    
+    <footer class="bg-gray-800 text-white text-center">
+        <div class="main-footer bg-gray-800">
+            <div class="container mx-auto py-8">
+                <div class="grid grid-cols-1 gap-y-6 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="column">
+                        <span class="icon-phone-call phone-icon"></span>
+                        <span class="call-us text-white text-sm font-regular font-bold">Call Us</span><br>
+                        <a class="mt-1 text-blue-500" href="tel:8928024703">+91 8928024703</a><br>
+                        <a class="mt-1 text-blue-500" href="tel:9029426185">+91 9029426185</a><br>
+                        <span class="icon-envelope phone-icon"></span><br>
+                        <span class="call-us text-white text-sm font-regular font-bold">Email Us</span><br>
+                        <a class="mt-1 text-blue-500" href="mailto:chinmay.panchal@sctspl.com">chinmay.panchal@sctspl.com</a><br>
+                        <a class="mt-1 text-blue-500" href="mailto:nayan.jain@sctspl.com">nayan.jain@sctspl.com</a><br>
+                        <a class="mt-1 text-blue-500" href="mailto:sales1@sctspl.com">sales1@sctspl.com</a><br>
+                    </div>
+                    <div class="column hidden md:block">
+                        <span class="py-auto mb-4 text-sm font-bold text-white">Menu</span><br><br>
+                        <a class="text-blue-500" href="/sctspl/index.html">Home</a><br>
+                        <a class="text-blue-500" href="/sctspl/AboutUs/about.html">About Us</a><br>
+                        <a class="text-blue-500" href="/sctspl/products/products-categories.html">Products</a><br>
+                        <a class="text-blue-500" href="/sctspl/Customers/customers.html">Customers</a><br>
+                        <a class="text-blue-500" href="/sctspl/ContactUs/contact.html">Contact Us</a>
+                    </div>
+                    <div class="column hidden md:block">
+                        <a class="py-auto text-sm font-bold text-white" href="/sctspl/products/products-categories.html">Products</a><br><br>
+                        <a class="text-blue-500" href="/sctspl/products/tubes/tubes.html">Tubes</a><br>
+                        <a class="text-blue-500" href="/sctspl/products/valves/valves.html">Valves</a><br>
+                        <a class="text-blue-500" href="/sctspl/products/fittings/fittings.html">Fittings</a><br>
+                        <a class="text-blue-500" href="/sctspl/products/regulators/regulators.html">Regulators</a><br>
+                        <a class="text-blue-500" href="/sctspl/products/accessories/accessories.html">Accessories</a>
+                    </div>
+                    <div class="column">
+                        <span class="text-sm font-bold text-white">Find Us</span><br><br>
+                        <span class="py-auto mb-4 text-sm text-white">SCT Solutions</span><br>
+                        <a class=" px-5 text-blue-500" href="https://maps.app.goo.gl/x8dYGDLaB2i9ADyi9">605, 6th Floor, Filix Condolium, Opposite Asian paints, LBS Marg Road, Bhandup West, Mumbai-400078</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 text-white py-4 mt-auto">
+            &copy; 2024 SCTSPL. All rights reserved.
+        </div>
     </footer>
+
     <script>
         const navDropdown = document.querySelector('.navbar-dropdown');
 
@@ -314,10 +377,6 @@
                 }
             });
         }
-        function redirectToDescriptionPage(){
-            window.location.href = '/sctspl/products/tubes/tubesdescription.html'
-        }
-      
     </script>
 </body>
 
