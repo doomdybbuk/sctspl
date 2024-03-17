@@ -170,7 +170,7 @@
                 </div>
             </div>
         </div>
-        <div class="container pb-6 py-12 mx-5 text-center">
+        <div class="container pb-6 py-12 mx-auto text-center">
             <!-- Existing content... -->
     
             <!-- New form content -->
@@ -178,20 +178,26 @@
                 <!-- Form -->
                 <div class="lg:border lg:border-gray-300 lg:rounded-md lg:p-6 bg-#b6f492 p-4 rounded-md shadow-md">
                     <!-- Form -->
-                    <form>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="b7396014-d286-4f31-9e51-136a6788f939">
                         <div class="mb-4">
                             <label for="name" class="block text-sm font-medium text-gray-800">Name</label>
                             <input type="text" id="name" name="name" class="mt-1 p-2 w-full border border-gray-300 rounded-md">
                         </div>
                         
-                        <div class="mb-4">
-                            <label for="email" class="block text-sm font-medium text-gray-800">Email</label>
-                            <input type="email" id="email" name="email" class="mt-1 p-2 w-full border border-gray-300 rounded-md">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-gray-800">Email</label>
+                                <input type="email" id="email" name="email" class="mt-1 p-2 w-full border border-gray-300 rounded-md">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-sm font-medium text-gray-800">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="mt-1 p-2 w-full border border-gray-300 rounded-md">
+                            </div>
                         </div>
-                        
                         <div class="mb-4">
                             <label for="purpose" class="block text-sm font-medium text-gray-800">Purpose of Contacting</label>
-                            <textarea id="purpose" name="purpose" rows="4" class="mt-1 p-2 w-full border border-gray-300 rounded-md"></textarea>
+                            <textarea id="purpose" name="purpose" rows="3" class="mt-1 p-2 w-full border border-gray-300 rounded-md" style="width: 700px; height: 70px;"></textarea>
                         </div>
                 
                         <div class="flex justify-end">
